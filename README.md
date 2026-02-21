@@ -15,7 +15,7 @@ Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Pro
 
 ---
 
-Analysis 1 Global XCO₂ Trend (2019–2025)
+##Analysis 1 Global XCO₂ Trend (2019–2025)
 
 Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2025. Quality-filtered soundings are gridded at 2° resolution and analyzed across five global regions to quantify the rise in column-averaged CO₂ (XCO₂) over six years.
 
