@@ -30,11 +30,14 @@ Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2
 
 ### Results
 
-![Global Maps](outputs/fig1_global_maps.png)
+#### 🗺️ Global Daily Snapshots
+![Global Daily Snapshots — XCO₂ spatial distribution across 4 dates](Images/global-daily-snapshots.png)
 
-![Statistics](outputs/fig3_statistics.png)
+#### 📈 Statistical Summary
+![Statistical Summary — Mean, trend, and regional heatmaps](Images/statistical-summary.png)
 
-![Distribution](outputs/fig4_distribution.png)
+#### 📊 XCO₂ Distribution Analysis
+![Global XCO₂ Distribution — Histograms showing temporal evolution 2019→2025](Images/global-xc02-distribution.png)
 
 ### Key Findings
 
@@ -62,7 +65,8 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 
 ### Results
 
-![Cross Validation](outputs/fig5_cross_validation.png)
+#### 🔄 Cross-Product Analysis
+![Cross-Product Validation — Lite FP vs IMAP-DOAS over India](Images/cross-analysis.png)
 
 ### Key Findings
 
