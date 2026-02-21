@@ -11,7 +11,7 @@
 
 ## 📌 Overview
 
-Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Processes HDF5/NetCDF4 granules to quantify a global +13.6 ppm CO₂ rise (2019–2025) and performs inter-product validation between two NASA retrieval algorithms over India. Built in MATLAB with geospatial filtering and multi-temporal visualization.
+Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Processed HDF5/NetCDF4 granules to quantify a global +13.6 ppm CO₂ rise (2019–2025) and performs inter-product validation between two NASA retrieval algorithms over India. Built in MATLAB with geospatial filtering and multi-temporal visualization.
 
 ---
 
