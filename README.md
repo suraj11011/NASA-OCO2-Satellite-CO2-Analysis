@@ -15,7 +15,7 @@ Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Pro
 
 ---
 
-## 📊 Analysis 1 Global XCO₂ Trend (2019–2025)
+Analysis 1 Global XCO₂ Trend (2019–2025)
 
 Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2025. Quality-filtered soundings are gridded at 2° resolution and analyzed across five global regions to quantify the rise in column-averaged CO₂ (XCO₂) over six years.
 
@@ -31,13 +31,13 @@ Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2
 ### Results
 
  Global Daily Snapshots
-![Global Daily Snapshots — XCO₂ spatial distribution across 4 dates](Images/global-daily-snapshots.png)
+![Global Daily Snapshots XCO₂ spatial distribution across 4 dates](Images/global-daily-snapshots.png)
 
-#### 📈 Statistical Summary
+Statistical Summary
 ![Statistical Summary — Mean, trend, and regional heatmaps](Images/statistical-summary.png)
 
-#### 📊 XCO₂ Distribution Analysis
-![Global XCO₂ Distribution — Histograms showing temporal evolution 2019→2025](Images/global-xc02-distribution.png)
+XCO₂ Distribution Analysis
+![Global XCO₂ Distribution Histograms showing temporal evolution 2019→2025](Images/global-xc02-distribution.png)
 
 ### Key Findings
 
@@ -51,7 +51,7 @@ Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2
 
 ---
 
-## 📊 Analysis 2 — Inter-Product Validation over India
+Analysis 2 Inter-Product Validation over India
 
 Compares two fundamentally different OCO-2 retrieval algorithms — the full-physics **Lite FP** product and the **IMAP-DOAS** (Iterative Maximum A Posteriori DOAS) Level 2 IDP product — over the Indian subcontinent. Identifies and explains a systematic bias between the two products.
 
@@ -66,7 +66,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 ### Results
 
 #### 🔄 Cross-Product Analysis
-![Cross-Product Validation — Lite FP vs IMAP-DOAS over India](Images/cross-analysis.png)
+![Cross-Product Validation Lite FP vs IMAP-DOAS over India](Images/cross-analysis.png)
 
 ### Key Findings
 
@@ -85,7 +85,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 
 ---
 
-## 🗂️ Dataset
+## Dataset
 
 | File | Product | Date | Coverage |
 |------|---------|------|----------|
@@ -95,12 +95,12 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 | `oco2_LtCO2_251031_...nc4` | OCO-2 L2 Lite FP V11.2 | Oct 31, 2025 | Global |
 | `oco2_L2IDPGL_191002_...h5` | OCO-2 L2 IMAP-DOAS V10r | Oct 02, 2019 | Global |
 
-> ⚠️ Data files not included due to size constraints.
+> Data files not included due to size constraints.
 > Download from [NASA GES DISC](https://disc.gsfc.nasa.gov)
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── analysis1_global_co2.m         # Global XCO₂ trend analysis
@@ -111,7 +111,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 1. Download data files from [NASA GES DISC](https://disc.gsfc.nasa.gov)
 2. Place all `.nc4` and `.h5` files in the same folder as the scripts
@@ -123,7 +123,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 
 ---
 
-## 🛠️ Skills Demonstrated
+## Skills Demonstrated
 
 - Satellite remote sensing data processing (HDF5, NetCDF4)
 - Geospatial filtering, bounding box extraction and land/ocean masking
@@ -134,7 +134,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 
 ---
 
-## 📜 Data Citation
+## Data Citation
 
 > Crisp, D., et al. (2020). OCO-2 Level 2 Lite FP, V11.2.
 > NASA Goddard Earth Sciences Data and Information Services Center (GES DISC).
