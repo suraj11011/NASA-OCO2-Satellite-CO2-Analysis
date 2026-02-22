@@ -11,7 +11,7 @@
 
 Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Processed HDF5/NetCDF4 granules to quantify a global +13.6 ppm CO₂ rise (2019–2025) and performed inter-product validation between two NASA retrieval algorithms over India. Built in MATLAB with geospatial filtering and multi-temporal visualization.
 
-## 📊 Analysis 1 — Global XCO₂ Trend (2019–2025)
+##  Analysis 1 — Global XCO₂ Trend (2019–2025)
 
 Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2025. Quality-filtered soundings are gridded at 2° resolution and analyzed across five global regions to quantify the rise in column-averaged CO₂ (XCO₂) over six years.
 
@@ -43,7 +43,7 @@ Overlapping histograms of all quality-filtered global soundings for each year. E
 | Linear trend | +2.3 ppm/year |
 | Highest regional XCO₂ | East Asia (427.1 ppm in 2025) |
 
-## 📊 Analysis 2 — Inter-Product Validation over India
+##  Analysis 2 — Inter-Product Validation over India
 
 Compares two fundamentally different OCO-2 retrieval algorithms over the Indian subcontinent — the full-physics **Lite FP** product and the **IMAP-DOAS** (Iterative Maximum A Posteriori DOAS) Level 2 IDP product. Identifies, quantifies and explains the systematic bias between the two products.
 
@@ -65,7 +65,7 @@ The top panels show side-by-side spatial maps of both products over India. Lite 
 
 The ~11 ppm difference is attributed to seasonal CO₂ variability (~3–4 ppm), algorithmic retrieval differences between the two preprocessing approaches, and non-coincident orbital sampling (Oct 2 vs Dec 31, 2019).
 
-## 🗂️ Dataset
+##  Dataset
 
 | File | Product | Date | Coverage |
 |------|---------|------|----------|
@@ -77,7 +77,7 @@ The ~11 ppm difference is attributed to seasonal CO₂ variability (~3–4 ppm),
 
 > Data files not included due to size constraints. Download from [NASA GES DISC](https://disc.gsfc.nasa.gov)
 
-## ▶️ How to Run
+##  How to Run
 
 1. Download data files from [NASA GES DISC](https://disc.gsfc.nasa.gov)
 2. Place all `.nc4` and `.h5` files in the same folder as the scripts
