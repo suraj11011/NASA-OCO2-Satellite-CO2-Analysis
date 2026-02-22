@@ -1,43 +1,37 @@
 # 🛰️ NASA-OCO2-Satellite-Carbon-Analysis
 
-### Global CO₂ Trend Analysis & Inter-Product Validation using NASA OCO-2 Satellite Data
+### Global CO₂ Trend Analysis and Inter-Product Validation using NASA OCO-2 Satellite Data
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2019b+-orange)
 ![NASA](https://img.shields.io/badge/Data-NASA%20OCO--2-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
----
-
 ## 📌 Overview
 
-Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Processed HDF5/NetCDF4 granules to quantify a global +13.6 ppm CO₂ rise (2019–2025) and performs inter-product validation between two NASA retrieval algorithms over India. Built in MATLAB with geospatial filtering and multi-temporal visualization.
+Satellite-based atmospheric CO₂ analysis using NASA OCO-2 spaceborne data. Processed HDF5/NetCDF4 granules to quantify a global +13.6 ppm CO₂ rise (2019–2025) and performed inter-product validation between two NASA retrieval algorithms over India. Built in MATLAB with geospatial filtering and multi-temporal visualization.
 
----
-
-##Analysis 1 Global XCO₂ Trend (2019–2025)
+## 📊 Analysis 1 — Global XCO₂ Trend (2019–2025)
 
 Processes four OCO-2 Level 2 Lite FP (V11.2) NetCDF4 granules spanning 2019 to 2025. Quality-filtered soundings are gridded at 2° resolution and analyzed across five global regions to quantify the rise in column-averaged CO₂ (XCO₂) over six years.
 
-### Figures
+### Figure 1 — Global XCO₂ Spatial Maps
 
-| Figure | Description |
-|--------|-------------|
-| Fig 1 | Global XCO₂ spatial maps — 4 dates with coastline overlays |
-| Fig 2 | Year-over-year difference maps vs 2019 baseline |
-| Fig 3 | Statistical summary — mean, trend, regional heatmap, P5–P95 |
-| Fig 4 | Global XCO₂ distribution histograms 2019→2025 |
+![Global Daily Snapshots](Images/global-daily-snapshots.png)
 
-### Results
+Each panel shows OCO-2 orbital track data for a single day, colored by XCO₂ concentration (blue = low, red = high). The diagonal stripe pattern is physically accurate — OCO-2's narrow 10km swath means only a thin slice of Earth is observed per orbit. The progressive warming of colors from 2019 to 2025 directly visualizes the rising CO₂ burden, with 2025 tracks appearing predominantly red/orange where 2019 tracks were blue/cyan over the same regions.
 
- Global Daily Snapshots
-![Global Daily Snapshots XCO₂ spatial distribution across 4 dates](Images/global-daily-snapshots.png)
+### Figure 2 — Statistical Summary
 
-Statistical Summary
-![Statistical Summary — Mean, trend, and regional heatmaps](Images/statistical-summary.png)
+![Statistical Summary](Images/statistical-summary.png)
 
-XCO₂ Distribution Analysis
-![Global XCO₂ Distribution Histograms showing temporal evolution 2019→2025](Images/global-xc02-distribution.png)
+Four-panel statistical breakdown of the global XCO₂ rise. The bar chart shows annual global mean XCO₂ with standard deviation error bars and cumulative increases relative to 2019. The trend line shows a consistent rate of +2.3 ppm/year, exceeding the 1990s average of ~1.5 ppm/year. The regional heatmap shows East Asia consistently registering the highest concentrations in every year. The P5-P95 range boxes confirm the CO₂ rise is a global phenomenon rather than a localized signal.
+
+### Figure 3 — XCO₂ Distribution
+
+![Global XCO₂ Distribution](Images/global-xc02-distribution.png)
+
+Overlapping histograms of all quality-filtered global soundings for each year. Each year's distribution is completely distinct with no overlap between 2019 and 2025, and the means shift monotonically from 410.7 ppm to 415.1 ppm to 420.2 ppm to 424.3 ppm. The sharpening of the 2025 peak reflects tighter orbital sampling geometry on that specific date.
 
 ### Key Findings
 
@@ -49,24 +43,15 @@ XCO₂ Distribution Analysis
 | Linear trend | +2.3 ppm/year |
 | Highest regional XCO₂ | East Asia (427.1 ppm in 2025) |
 
----
+## 📊 Analysis 2 — Inter-Product Validation over India
 
-Analysis 2 Inter-Product Validation over India
+Compares two fundamentally different OCO-2 retrieval algorithms over the Indian subcontinent — the full-physics **Lite FP** product and the **IMAP-DOAS** (Iterative Maximum A Posteriori DOAS) Level 2 IDP product. Identifies, quantifies and explains the systematic bias between the two products.
 
-Compares two fundamentally different OCO-2 retrieval algorithms — the full-physics **Lite FP** product and the **IMAP-DOAS** (Iterative Maximum A Posteriori DOAS) Level 2 IDP product — over the Indian subcontinent. Identifies and explains a systematic bias between the two products.
+### Figure 4 — Cross-Product Validation
 
-### Figures
+![Cross-Product Validation](Images/cross-analysis.png)
 
-| Figure | Description |
-|--------|-------------|
-| Fig 5 | Side-by-side spatial maps — Lite FP vs IMAP-DOAS over India |
-| Fig 6 | XCO₂ distribution comparison — both products overlaid |
-| Fig 7 | Statistical comparison table — mean, std, P5, P95, range |
-
-### Results
-
-#### 🔄 Cross-Product Analysis
-![Cross-Product Validation Lite FP vs IMAP-DOAS over India](Images/cross-analysis.png)
+The top panels show side-by-side spatial maps of both products over India. Lite FP values cluster tightly around 410 ppm with low standard deviation (0.91 ppm), reflecting its high-precision full-physics retrieval. IMAP-DOAS values cluster around 398.6 ppm with higher spread (std = 4.2 ppm), consistent with its simpler retrieval approach. The bottom-left histogram makes the bias immediately visible as two completely separated distributions. The bottom-right table quantifies all key metrics side by side.
 
 ### Key Findings
 
@@ -78,14 +63,9 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 | P5 | 408.52 ppm | 390.85 ppm | −17.66 ppm |
 | P95 | 411.27 ppm | 404.96 ppm | −6.32 ppm |
 
-> **Note:** The ~11 ppm difference is attributed to three factors:
-> seasonal CO₂ variability (~3–4 ppm), algorithmic retrieval
-> differences between the two preprocessing approaches, and
-> non-coincident orbital sampling (Oct 2 vs Dec 31, 2019).
+The ~11 ppm difference is attributed to seasonal CO₂ variability (~3–4 ppm), algorithmic retrieval differences between the two preprocessing approaches, and non-coincident orbital sampling (Oct 2 vs Dec 31, 2019).
 
----
-
-## Dataset
+## 🗂️ Dataset
 
 | File | Product | Date | Coverage |
 |------|---------|------|----------|
@@ -95,23 +75,9 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 | `oco2_LtCO2_251031_...nc4` | OCO-2 L2 Lite FP V11.2 | Oct 31, 2025 | Global |
 | `oco2_L2IDPGL_191002_...h5` | OCO-2 L2 IMAP-DOAS V10r | Oct 02, 2019 | Global |
 
-> Data files not included due to size constraints.
-> Download from [NASA GES DISC](https://disc.gsfc.nasa.gov)
+> Data files not included due to size constraints. Download from [NASA GES DISC](https://disc.gsfc.nasa.gov)
 
----
-
-## Repository Structure
-
-```
-├── analysis1_global_co2.m         # Global XCO₂ trend analysis
-├── analysis3_cross_validation.m   # Inter-product validation
-├── outputs/                       # Generated figures (.png)
-└── README.md
-```
-
----
-
-## How to Run
+## ▶️ How to Run
 
 1. Download data files from [NASA GES DISC](https://disc.gsfc.nasa.gov)
 2. Place all `.nc4` and `.h5` files in the same folder as the scripts
@@ -121,9 +87,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 
 **Requirements:** MATLAB R2019b or later | Mapping Toolbox
 
----
-
-## Skills Demonstrated
+## 🛠️ Skills Demonstrated
 
 - Satellite remote sensing data processing (HDF5, NetCDF4)
 - Geospatial filtering, bounding box extraction and land/ocean masking
@@ -132,9 +96,7 @@ Compares two fundamentally different OCO-2 retrieval algorithms — the full-phy
 - Inter-product scientific validation methodology
 - Statistical analysis and publication-quality visualization in MATLAB
 
----
-
-## Data Citation
+## 📜 Data Citation
 
 > Crisp, D., et al. (2020). OCO-2 Level 2 Lite FP, V11.2.
 > NASA Goddard Earth Sciences Data and Information Services Center (GES DISC).
