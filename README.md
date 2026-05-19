@@ -87,7 +87,7 @@ The ~11 ppm difference is attributed to seasonal CO₂ variability (~3–4 ppm),
 
 **Requirements:** MATLAB R2019b or later | Mapping Toolbox
 
-## 🛠️ Skills Demonstrated
+## Skills Demonstrated
 
 - Satellite remote sensing data processing (HDF5, NetCDF4)
 - Geospatial filtering, bounding box extraction and land/ocean masking
@@ -96,7 +96,7 @@ The ~11 ppm difference is attributed to seasonal CO₂ variability (~3–4 ppm),
 - Inter-product scientific validation methodology
 - Statistical analysis and publication-quality visualization in MATLAB
 
-## 📜 Data Citation
+## Data Citation
 
 > Crisp, D., et al. (2020). OCO-2 Level 2 Lite FP, V11.2.
 > NASA Goddard Earth Sciences Data and Information Services Center (GES DISC).
